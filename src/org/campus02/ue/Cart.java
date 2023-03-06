@@ -31,6 +31,22 @@ public class Cart implements Comparable<Cart> {
         return totalAmount;
     }
 
+    /**
+     * calculate avg amount per item
+     * @return avg amount pert item
+     */
+    public double getAvgAmountPerItem() {
+        return this.totalAmount / this.totalItems;
+    }
+
+    /**
+     * calculate avg amount per article
+     * @return avg amount per article
+     */
+    public double getAvgAmountPerArticle() {
+        return this.totalAmount / this.getNumArticles();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
